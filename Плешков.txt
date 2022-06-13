@@ -1,0 +1,10 @@
+private void button1_Click(object sender, EventArgs e) //перенос
+        {
+            listBox2.BeginUpdate(); //запрещает изменение до конца 
+            foreach (object Item in listBox1.SelectedItems) //выбранную строку переносим 
+            {
+                listBox2.Items.Add(Item); 
+            }
+            listBox2.EndUpdate(); 
+            listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+        }
